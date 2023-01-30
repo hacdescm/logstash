@@ -1,0 +1,7 @@
+#!/bin/bash
+
+while :
+do
+	kinit -k -t "$KERBEROS_KEYTAB" "$KERBEROS_PRINCIPAL"
+	sleep $KERBEROS_RENEW_INTERVAL
+done
